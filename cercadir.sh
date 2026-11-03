@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for i in /usr/include/* ; do
-	if [[ -d ${i} && -r ${i} && ${i} -nt /usr/include/stdio.h ]] ;
+	if test -d ${i} -a -r ${i} -a ${i} -nt /usr/include/stdio.h ;
 	then
 		echo /usr/include/${i}
 	fi
